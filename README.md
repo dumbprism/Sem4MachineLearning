@@ -1,33 +1,45 @@
-# NAME : KOTAMRAJU ARHANT
-# ROLL NUMBER : AIE22123
+### NAME : KOTAMRAJU ARHANT
+### ROLL NUMBER : AIE22123
 
-# ASSIGNMENT REPORT
+### ASSIGNMENT REPORT
 
 ---
-###  SET A: QUESTION 01
+do check out my teammates github accounts
+1. Naveen(AIE221115) : [https://github.com/GanganapalliNaveen]
+2. Aashritha(AIE22144) : []
+
+####  SET A: QUESTION 01
 
 ###### Pseudo Code
 
 ```plaintext
+Input : target
+function Pairs(List,pairs)
 
-function findingPairs(List, target):
-pairs = empty list
-for i from 0 to length(List) - 1:
-for j from i+1 to length(List) - 1:
-if List[i] + List[j] equals target:
-append (List[i], List[j]) to pairs
-for k from i+2 to length(List) - 1:
-if List[i] + List[j] + List[k] equals target:
-append (List[i], List[j], List[k]) to pairs
-return pairs
+for i  = 0 to len(list)
+    for j = i+1 to len(list)
+        if List[i] + List[j] == target then
+            found_pair -> List[i] + List[j]
+            append found_pair to list pairs
+        End if
+        for k = i+2 to len(list)
+            if List[i] + List[j] + List[k] == target:
+                found_pair -> List[i] + List[j] + List[k]
+                append found pair to list pairs
+        End for
+    End for
+End for
 
-target = get user input("Enter the final target sum from the list elements")
-user_list = get user input("Enter the list values separated by spaces and convert to list")
-convert user_list to list
-print("User list:", user_list)
-pairs = findPairsAndTriplets(user_list, target)
-print("Pairs and triplets in the list that form a sum of", target, "are:", pairs)
+user_list -> create empty list()
+Input :  n -> size of the list
+Print enter the values of the list
 
+for a = 0 to n 
+    values -> Input : entering the values
+    append the values in the user_list list
+Print user_list
+pairs -> create empty list()
+Pairs(user_list,pairs)
 ```
 
 **Code Explanation :** 
@@ -46,26 +58,29 @@ Overall, to not be bound to only one list as per the question, I have made sure 
 
 ```plaintext
 
-function findingRange(List):
-    for i from 0 to length(List) - 1:
-        for j from i + 1 to length(List) - 1:
-            if List[i] > List[j]:
-                swap(List[i], List[j])
+function findingrange(List):
+    for i = 0 to length(List):
+        for j = i+1 to length(List):
+            if List[i]  > List[j] : 
+                temp = List[i]
+                List[i] = List[j]
+                List[j] = temp
+            End if
+        End for
+    End for
 
-    computed_range = List[length(List) - 1] - List[0]
-    if computed_range < 0:
-        print("ERROR: the range cannot be computed...")
-    print("the range of the List is " + computed_range)
+    computed_range -> List[n-1] - List[0]
+    if computed_range < 0 then
+        print("Error : the range cannot be computed...")
+    print(f"the range of the List is {computed_range}")
 
-
-userList = empty list
-n = input("Enter the size of the list = ")
-for a from 0 to n - 1:
-    value = input("enter the " + a + "th element of the list = ")
-    append value to userList
-
-print("the current list includes elements = " + convertToString(userList))
-findingRange(userList)
+    userList = empty List
+    n -> Input : Enter the size of the list
+    for a = 0 to n do 
+        value -> Input : enterin the ath value of the list
+        append value to userList
+    
+    findingRange(userList)
 
 ```
 
@@ -82,12 +97,12 @@ The main objective of the question is to find the range of a user input list. To
 ```
 plaintext
 function matrix_mult(A, B):
-    result = empty list
-    for i from 0 to length(A) - 1:
-        rows = empty list
-        for j from 0 to length(B[0]) - 1:
+    result -> empty list
+    for i from 0 to length(A) - 1 do 
+        rows -> empty list
+        for j from 0 to length(B[0]) - 1 do 
             mul_value = 0
-            for k from 0 to length(B) - 1:
+            for k from 0 to length(B) - 1 do
                 mul_value = mul_value + A[i][k] * B[k][j]
             append sum_value to rows
         append rows to result
@@ -134,31 +149,32 @@ The question's main objective is to find A^m. Where A is a matrix and m is the p
 ###### Pseudo Code
 
 ```plaintext
- Get user input for a word and store it in the variable 'word'.
+  Get user input for a word and store it in the variable 'word'.
  Initialize variables: 
-   - count = 0
-   - max_count = 0
-   - frequent_letter = ''
-   - letters_list = empty list
+   count = 0
+   max_count = 0
+   frequent_letter = ''
+   letters_list = empty list
 
  Iterate through each character (a) in the input word:
-   - Append the character 'a' to the 'letters_list'.
+   Append the character 'a' to the 'letters_list'.
 
   Display the 'letters_list'.
 
 Iterate over the range of the length of 'letters_list' using variable 'i':
-   - Set 'count' to 1.
+   Set 'count' to 1.
 
    Iterate over the range (j) from (i + 1) to the length of 'letters_list':
-       - Check if 'letters_list[i]' is equal to 'letters_list[j]':
-           - Increment 'count' by 1.
-           - If 'count' is greater than 'max_count':
-               - Update 'max_count' to 'count'.
-               - Update 'frequent_letter' to 'letters_list[i]'.
+       Check if 'letters_list[i]' is equal to 'letters_list[j]':
+           Increment 'count' by 1.
+           If 'count' is greater than 'max_count':
+               Update 'max_count' to 'count'.
+               Update 'frequent_letter' to 'letters_list[i]'.
 
 Display the most occurring letter and its count:
-   - Display "The most occurring letter is: " followed by 'frequent_letter'.
-   - Display the occurrence count of the most occurring letter.
+   Display "The most occurring letter is: " followed by 'frequent_letter'.
+   Display the occurrence count of the most occurring letter.
+
 ```
 
 **Code Explanation**
