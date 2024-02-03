@@ -44,8 +44,7 @@ Pairs(user_list,pairs)
 
 **Code Explanation :** 
 
-The main objective of the question is to find pairs that give us a specified target sum. In this case it is 10. To attain that, the approach that I have used is that, I shall first be finding pairs that produce the the sum as 10 when two numbers are added. to do that I have implemented 2 `for` loops. The ranges are set set as per the length of the list for the outer loop 'i' and `i+1` to `length-1` for the inner loop 'j'. So basically, the elements shall be stored in the list. Here is the pictorial representation of what will happen : 
-![[Pasted image 20240203092303.png]]
+The main objective of the question is to find pairs that give us a specified target sum. In this case it is 10. To attain that, the approach that I have used is that, I shall first be finding pairs that produce the the sum as 10 when two numbers are added. to do that I have implemented 2 `for` loops. The ranges are set set as per the length of the list for the outer loop 'i' and `i+1` to `length-1` for the inner loop 'j'. So basically, the elements shall be stored in the list. 
 
 'i' shall iterate the `if` conditions help in finding if the sum is 10 or not. But since we are considering the complete list, we must also see if there are pair of three that form a sum of 10 and indeed there are. Thus, I have used another `for` loop, from range `i+2` to `length of the list` to find pair of three.
 
