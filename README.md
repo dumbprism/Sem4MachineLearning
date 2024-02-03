@@ -6,7 +6,7 @@
 ---
 do check out my teammates github accounts
 1. Naveen(AIE221115) : [https://github.com/GanganapalliNaveen]
-2. Aashritha(AIE22144) : []
+2. Aashritha(AIE22144) : [https://github.com/aasritha22144]
 
 ####  SET A: QUESTION 01
 
