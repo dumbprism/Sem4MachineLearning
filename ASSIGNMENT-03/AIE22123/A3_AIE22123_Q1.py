@@ -1,15 +1,18 @@
 import pandas as pd
 import numpy as np
 
+#taking dataset from the excel sheet
 file = pd.read_excel(r"Lab Session1 Data.xlsx",sheet_name="Purchase data")
 A = file[['Candies (#)', 'Mangoes (Kg)', 'Milk Packets (#)']].to_numpy()
 C = file['Payment (Rs)'].to_numpy().reshape(-1, 1)
 print(f"A = {A}")
 print(f"C = {C}")
 
+#finding the dimensionality of the vector space
 dimensionality = A.shape[1]
 print("the dimensionality of the vector space is  = " + str(dimensionality))
 
+#finding the total number of vectors the vector space
 vector_space = A.shape[0]
 print("the number of vectors in the vector space is = " + str(vector_space))
 
