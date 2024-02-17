@@ -7,6 +7,7 @@ C = file['Payment (Rs)'].to_numpy().reshape(-1, 1)
 print(f"A = {A}")
 print(f"C = {C}")
 
+#finding the pseudo inverse
 pseudo_inverse = np.linalg.pinv(A)
 
 model_vector_X = np.dot(pseudo_inverse,C)
